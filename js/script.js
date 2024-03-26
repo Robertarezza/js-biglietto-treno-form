@@ -25,9 +25,9 @@ const kmValue = parseInt(kmInputElem.value);  // number
 console.log(kmValue, typeof kmValue);
 
 const ageInputElem= document.getElementById("age"); // object | null
-console.log(ageInputElem);
+console.log(ageInputElem, typeof ageInputElem);
 
-const ageValue= parseInt(ageInputElem.value);  // number
+const ageValue= parseInt(ageInputElem.value);  // 
 console.log(ageValue, typeof ageValue);
 
 if (isNaN(kmValue) === false  && kmValue > 0 ) {
