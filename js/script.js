@@ -30,7 +30,7 @@ console.log(ageInputElem);
 const ageValue= parseInt(ageInputElem.value);  // number
 console.log(ageValue, typeof ageValue);
 
-if (isNaN(kmValue) === false && isNaN(ageValue) === false && kmValue > 0 && ageValue > 0) {
+if (isNaN(kmValue) === false  && kmValue > 0 ) {
 
 //calcolo prezzo biglietto per km
 const ticketPrice = kmValue * 0.21; // number
@@ -38,10 +38,10 @@ console.log(ticketPrice);
 
 let discount = 0;
 
-if (ageValue < 18) {
+if (ageValue === "minorenne") {
   discount = 20;
   document.getElementById("ticket_price").innerHTML = "Biglietto scontato 20%";
-} else if (ageValue > 65) {
+} else if (ageValue === "over65") {
   discount = 40;
   document.getElementById("ticket_price").innerHTML = "Biglietto scontato 40%";
 }else {
@@ -63,7 +63,7 @@ console.log(number, typeof number);
 //stampa
 document.getElementById("carriage").innerHTML = number;
 document.getElementById("name").innerHTML = nameValue;
-document.getElementById("ticket").innerHTML = finalTicketPrice.toFixed(2);
+document.getElementById("ticket").innerHTML = finalTicketPrice.toFixed(2) + " €";
 } else{
     alert("dati errati")
 }

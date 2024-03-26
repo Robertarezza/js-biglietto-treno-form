@@ -14,13 +14,15 @@
 h1{
  text-align: center;
     padding: 20px 0;
+    color: wheat;
 }
 
 .cont{
     background-color: white;
     width: 80%;
+    max-width: 60%;
     margin: 20px auto;
-    border: 1px solid black;
+    box-shadow: 5px 8px;
     padding: 20px;
     border-radius: 10px;
 }
@@ -33,7 +35,30 @@ h1{
 
 .input{
     text-align: center;
+ 
 }
+
+
+.input>button{
+    margin: 2px;
+    padding: 2px;
+    width: 25%;
+    font-weight: 700;
+    border-radius: 8px;
+}
+input{
+
+    padding: 2px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+select{
+    padding: 2px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
 table{
     width: 100%;
     border-top: 1px solid black;
