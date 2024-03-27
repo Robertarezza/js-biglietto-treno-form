@@ -49,4 +49,4 @@ prezzo scontato = prezzo base - (prezzo base * sconto/100)
 
   3. Output
 
-  stampa il risultato 
+  stampa il biglietto

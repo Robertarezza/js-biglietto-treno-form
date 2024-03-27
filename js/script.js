@@ -2,7 +2,7 @@
 //alert("ciao")
 
 //bottone genera
-const sendBtnElem = document.getElementById("send-btn"); // object | nulla
+const sendBtnElem = document.getElementById("send-btn"); // object | null
 console.log(sendBtnElem);
 
 
@@ -21,16 +21,19 @@ console.log(nameValue, typeof nameValue);
 const kmInputElem = document.getElementById("user-km"); // object | null
 console.log(kmInputElem);
 
-const kmValue = parseInt(kmInputElem.value);  // number
+//kilometri con virgola
+const kmValue = parseFloat(kmInputElem.value);  // number
 console.log(kmValue, typeof kmValue);
 
 const ageInputElem= document.getElementById("age"); // object | null
 console.log(ageInputElem, typeof ageInputElem);
 
-const ageValue= parseInt(ageInputElem.value);  // 
+const ageValue= (ageInputElem.value);  // 
 console.log(ageValue, typeof ageValue);
 
-if (isNaN(kmValue) === false  && kmValue > 0 ) {
+
+//controllo numero + controllo age + controllo nome
+if (isNaN(kmValue) === false  && kmValue > 5 && (ageValue) !== "" && isNaN(nameValue) === true) {
 
 //calcolo prezzo biglietto per km
 const ticketPrice = kmValue * 0.21; // number
@@ -50,6 +53,9 @@ if (ageValue === "minorenne") {
 }
 console.log("discount in %" , discount);
 
+//In css la class ticket_new è in display nane cosi la rimuovo 
+document.getElementById("new").classList.remove("ticket_new");
+
 const totalDiscount = (ticketPrice * discount) / 100; // number
 console.log("discount in euro", totalDiscount);
 
@@ -57,7 +63,7 @@ const finalTicketPrice = ticketPrice - totalDiscount; // number
 console.log("Final Price", finalTicketPrice);
 
 //genera numero carrozza
-const number=Math.floor(Math.random() * 11); //number
+const number=Math.floor(Math.random() * 11) + 1; //number
 console.log(number, typeof number);
 
 //stampa
@@ -78,3 +84,4 @@ console.log(BtnElem);
 BtnElem.addEventListener("click", function() {
     window.location.reload()
 })
+
